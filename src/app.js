@@ -4,7 +4,9 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -17,7 +19,7 @@ const app = express();
 
 app.use(cors({
   origin: ['http://localhost:5173', 'http://localhost:4000','http://localhost',
-   process.env.BASE_URL],
+   process.env.BASE_URL,process.env],
  credentials: true
 }));
 
