@@ -1,7 +1,7 @@
 import app from './app.js';
-import { connectDB} from './db.js';
+import { connectDB } from './db.js';
 
 connectDB();
-const POST = process.env.POST ||4000;
-app.listen(POST);
-console.log('Servidor corriendo en el puerto'+POST)
+app.listen(4000);
+const PORT = process.env.PORT ||4000;
+console.log('Servidor corriendo en el puerto 4000');
